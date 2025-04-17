@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        Car mojSamochod = new Car(5);
+
+        Car mojSamochod = new Car(5, "Toyota");
 
         mojSamochod.start();
         mojSamochod.stop();
