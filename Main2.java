@@ -1,15 +1,17 @@
 public class Main2 {
     public static void main(String[] args) {
+        Animal[] animals = {
+                new Lion(),
+                new Cat(),
+                new Wolf(),
+                new Dog()
+        };
 
-        Animal kot = new Cat("Kitty");
-        Animal pies = new Dog("Burek");
-
-
-        System.out.println(kot.makeNoise());
-        System.out.println(pies.makeNoise());
-
-
-        ((Cat) kot).scratch();
-        ((Dog) pies).fetch();
+        for (Animal animal : animals) {
+            System.out.println(animal.getClass().getSimpleName() + ":");
+            System.out.println(" - makeNoise(): " + animal.makeNoise());
+            System.out.println(" - roam(): " + animal.roam());
+            System.out.println();
+        }
     }
 }
